@@ -28,7 +28,7 @@ namespace NumbersToWords.Core.Services.ChequeWriter
                 return new Result<byte[]>()
                 {
                     IsError = true,
-                    ErrorMessage = "Could not find image file"
+                    ErrorMessage = Consts.ErrMsg_MissingImage
                 };
 
             byte[] imageAsByteArray;
