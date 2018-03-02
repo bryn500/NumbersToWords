@@ -9,8 +9,8 @@ namespace NumbersToWords.Models.Cheque
 {
     public class Cheque : IValidatableObject
     {
-        public static DateTime MinDate { get { return DateTime.Today.AddYears(-20); } }
-        public static DateTime MaxDate { get { return DateTime.Today; } }
+        public static DateTime MinDate { get { return DateTime.Today.AddYears(-1); } }
+        public static DateTime MaxDate { get { return DateTime.Today.AddYears(1); } }
         public const int MaxNameLength = 100;
         public const double MinAcceptedAmount = 0.01;
         public const int MaxAcceptedAmount = 1000000000;

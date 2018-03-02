@@ -26,15 +26,14 @@
     
     <label class="formItem">
         <span class="formItem__text">
-            Name <span class="required">*</span>
+            Who to pay <span class="required">*</span>
         </span>
 
         @Html.EditorFor(x => x.Name, new
         {
             htmlAttributes = new
-            {
-                placeholder = "Mr John Smith",
-                @class = "formItem__input js-validate",
+            {                
+                @class = "formItem__input",
                 required = "required",
                 maxlength = Cheque.MaxNameLength
             }
@@ -51,19 +50,18 @@
             {
                 //type = "date",
                 placeholder = "yyyy/mm/dd",
-                @class = "formItem__input js-validate",
+                @class = "formItem__input",
                 id = "datepicker",
                 required = "required",
                 min = Cheque.MinDate.Date.ToString("yyyy-MM-dd"),
-                max = Cheque.MaxDate.Date.ToString("yyyy-MM-dd"),
-                data_date_format = "yyyy/MM/dd"
+                max = Cheque.MaxDate.Date.ToString("yyyy-MM-dd")
             }
         })
     </label>
 
     <label class="formItem">
         <span class="formItem__text">
-            Amount (as a number)<span class="required">*</span>
+            Amount in AUD<span class="required">*</span>
         </span>
 
         @Html.EditorFor(x => x.Amount, new
@@ -71,8 +69,8 @@
             htmlAttributes = new
             {
                 type = "number",
-                placeholder = "2386.99",
-                @class = "formItem__input js-validate",
+                placeholder = "#.##",
+                @class = "formItem__input",
                 required = "required",
                 min = Cheque.MinAcceptedAmount,
                 max = Cheque.MaxAcceptedAmount,
@@ -82,5 +80,4 @@
     </label>
 
     <button type="submit" class="btn" id="submitForm">Submit</button>
-    <button type="reset" class="btn">Reset</button>
 }

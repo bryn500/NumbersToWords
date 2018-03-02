@@ -4,6 +4,9 @@
     'use strict';
 
     function formatDate(date) {
+        if (!date) {
+            return '';
+        }
         var d = new Date(date),
             month = '' + (d.getMonth() + 1),
             day = '' + d.getDate(),
@@ -15,14 +18,14 @@
         return [year, month, day].join('/');
     }
 
-    (function setupDatepicker() {
+    (function setupForm() {
         var dateElement = document.getElementById('datepicker');
 
         var minDate = new Date(dateElement.min);
         var maxDate = new Date(dateElement.max);
-        var dateFormat = dateElement.dataset.dateFormat;
 
         var options = {
+            defaultDate: formatDate(new Date()),
             field: dateElement,
             minDate: minDate,
             maxDate: maxDate,
@@ -31,6 +34,6 @@
         };
 
         var picker = new Pikaday(options);
-        picker.setDate(new Date());
+        picker.setDate(''); // to show placeholder
     }());
 }());
