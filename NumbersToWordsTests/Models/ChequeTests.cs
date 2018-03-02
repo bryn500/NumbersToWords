@@ -44,7 +44,7 @@ namespace NumbersToWordsTests.Models
             var model = new Cheque()
             {
                 Name = validCheque.Name,
-                Date = DateTime.Today.AddDays(1),
+                Date = Cheque.MaxDate.AddDays(1),
                 Amount = validCheque.Amount
             };
             var model2 = validCheque;
