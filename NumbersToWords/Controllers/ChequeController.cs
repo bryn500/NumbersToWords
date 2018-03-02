@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace NumbersToWords.Controllers
 {
+    [SessionState(System.Web.SessionState.SessionStateBehavior.Disabled)]
     public class ChequeController : BaseController
     {
         [HttpGet]
@@ -23,6 +24,7 @@ namespace NumbersToWords.Controllers
 
         [HttpPost]
         [Route("")]
+        [ValidateAntiForgeryToken]
         public ActionResult Form(Cheque model)
         {
             if (!ModelState.IsValid)
@@ -40,7 +42,7 @@ namespace NumbersToWords.Controllers
 
                 AmountInWordsLocation = new PointF(135f, 170f),
                 AmountInWordsOverflowLocation = new PointF(60f, 210f),
-                WrapCharacter = 45,
+                WrapCharacter = 40,
 
                 DateLocation = new PointF(620f, 92f),
 

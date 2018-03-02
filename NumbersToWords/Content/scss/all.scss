@@ -1,0 +1,9 @@
+﻿@import 'vendor/_normalise.scss';
+@import 'vendor/_pickaday.scss';
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 1rem;
+}
+
+@import '_form.scss';

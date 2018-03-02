@@ -112,6 +112,7 @@
     <Compile Include="Core\Services\Utility\IUtilityService.cs" />
     <Compile Include="Core\Services\NumbersToWords\NumbersToWordsService.cs" />
     <Compile Include="Core\Services\Utility\UtilityService.cs" />
+    <Compile Include="Core\Util\Urls.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -124,6 +125,10 @@
     <Content Include="Content\img\cheques\example.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\js\all.js" />
+    <Content Include="Content\js\all.min.js" />
+    <Content Include="Content\js\vendor\_pickaday.js" />
+    <Content Include="Content\scss\all.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Web.config" />
     <Content Include="Web.config">
@@ -146,13 +151,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Core\Util\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Alert.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\scss\vendor\_normalise.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\scss\_form.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\scss\all.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\scss\vendor\_pickaday.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

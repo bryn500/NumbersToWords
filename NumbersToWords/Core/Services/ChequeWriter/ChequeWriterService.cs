@@ -33,12 +33,13 @@ namespace NumbersToWords.Core.Services.ChequeWriter
 
             byte[] imageAsByteArray;
 
-            using (var image = (Bitmap)Image.FromFile(chequeImage.ImagePath))
+            using (var image = Image.FromFile(chequeImage.ImagePath))
             using (var graphics = Graphics.FromImage(image))
             using (var smallFont = new Font("Arial", 12))
-            using (var bigFont = new Font("Arial", 16))
-            using (var fontColour = Brushes.Black)
+            using (var bigFont = new Font("Arial", 16))            
             {
+                var fontColour = Brushes.Black;
+
                 graphics.DrawString(model.Amount.ToString("N2"), bigFont, fontColour, chequeImage.AmountLocation);
                 graphics.DrawString(model.Name, bigFont, fontColour, chequeImage.NameLocation);
                 graphics.DrawString(model.Date.ToShortDateString(), bigFont, fontColour, chequeImage.DateLocation);

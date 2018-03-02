@@ -3,14 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>@ViewBag.Title</title>
 
-    @RenderSection("css", required: false)   
+    <link rel="stylesheet" type="text/css" href="@Urls.GetVersionedUrl("~/Content/scss/all.css")" />
+    @RenderSection("css", required: false)
 </head>
-<body>    
+<body>
     @RenderBody()
-    
+
+    <script src="@Urls.GetVersionedUrl("~/Content/js/all.min.js")"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

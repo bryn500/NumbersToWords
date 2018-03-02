@@ -1,0 +1,30 @@
+﻿.formItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    &__text {
+        flex: 0 1 10rem;
+        margin-bottom: 0.25rem;
+    }
+
+    &__input {
+        flex: 0 1 10rem;
+        max-width: 10rem;
+        padding: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
+.required {
+    color: red;
+}
+
+.input-validation-error {
+    border: 1px solid red;
+}
+
+.field-validation-valid {
+    color: red;
+}
